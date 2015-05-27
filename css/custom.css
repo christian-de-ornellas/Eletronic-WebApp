@@ -1,0 +1,16 @@
+body{
+
+
+}
+.header-logotipo{
+padding-top: 45px;	
+width: 150px;
+height: 150px;
+}
+aside{
+margin-top: 20px;
+width: 200px;
+height: 250px;
+background: #eee;
+padding: 10px 10px 10px 10px;
+}
