@@ -29,31 +29,32 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <i class=""></i><i class="fa fa-user-plus"></i></i> Cadastrar <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <i class=""></i><i class="fa fa-user-plus"></i></i> Novos <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
+            <li><a href="cadastrar-clientes">Cliente</a></li>
+            <li><a href="cadastrar-promocaos">Promoção</a></li>
             <li class="divider"></li>
+            <li><a href="gerar-cupon">Gerar um cupon</a></li>
+            
             <li><a href="#">Separated link</a></li>
             <li class="divider"></li>
             <li><a href="#">One more separated link</a></li>
           </ul>
         </li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-folder-open"></i> Consultar<span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-folder-open"></i> Consultas<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
+            <li><a href="#">Nome</a></li>
+            <li><a href="#">Cpf</a></li>
+            <li><a href="#">Rg</a></li>
             <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
+            <li><a href="#">E-mail</a></li>
             <li class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
+            <li><a href="#">Nota fiscal</a></li>
           </ul>
         </li>
          <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <i class="fa fa-bar-chart"></i> Relatório <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <i class="fa fa-bar-chart"></i> Relatórios <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="#">Action</a></li>
             <li><a href="#">Another action</a></li>
@@ -93,8 +94,8 @@
   </a>
   <a href="#" class="list-group-item">Cadastrar cumpon</a>
   <a href="#" class="list-group-item">Imprimir cupons</a>
-  <a href="#" class="list-group-item">Cadastrar cliente</a>
-  <a href="#" class="list-group-item">Listar clientes</a>
+  <a href="cadastrar-clientes" class="list-group-item">Cadastrar cliente</a>
+  <a href="gerar-cupon" class="list-group-item">Gerar um cupon</a>
 </div>
 </aside>
 <section>
