@@ -89,12 +89,17 @@ echo $dataHora;
 </nav>
 <aside >
 	<div class="row">
-  <div class="col-xs-4">
- <i class="glyphicon glyphicon-user"></i> <p>&nbsp Dados do Funcionário(a)</p></div>
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="..." alt="...">
+    </a>
+  </div>
+  ...
 </div>
 </aside>
 <section></section>
-<footer></footer>  
+<footer>
+</footer>  
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
