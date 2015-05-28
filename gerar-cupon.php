@@ -44,15 +44,20 @@
     <input type="text" name"" class="form-control" readonly  value="<?php $Hora = date("h:i:s"); echo $Hora;?>">
   </div> <br /><br />
 
+  <textarea class="form-control" name="" rows="4" placeholder="Digite uma observação ou anotação importante caso precise." ></textarea>
+
+
   <div class="checkbox">
-      <label>
-        <input type="checkbox" name="" value="sim"><p>Eu aceito receber em meu e-mail informações e promoções.</p>
-      </label>
-    </div>
+    <label>
+       &nbsp; &nbsp; &nbsp;<input type="checkbox" name=""> <span class="label label-default">Eu aceito receber informações e promoções do MazaBox.</span>
+    </label>
+  </div>
+
 </div> <br />
 
 <button type="button" class="btn btn-danger"> <i class="fa fa-times"></i> Cancelar</button>
 <button type="button" class="btn btn-success"> <i class="fa fa-user-plus"></i> Gerar um cupon</button>
+
 
   </div>
 </div>

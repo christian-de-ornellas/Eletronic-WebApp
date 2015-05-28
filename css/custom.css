@@ -48,3 +48,8 @@ width: 920px;
 float: right;
 
 }
+textarea{
+margin-top:8px; 
+margin-left: 16px;
+width: 870px !important;
+}
