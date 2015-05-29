@@ -15,7 +15,7 @@ function __autoload($class_name) {
                     <?php
                     $cliente = new Cliente();
 
-                    if (isset($_POST['cadastrar'])):
+                    if (isset($_POST['incluir'])):
 
                         $nome_cliente = trim($_POST["nome_cliente"]);
                         $sobrenome_cliente = trim($_POST["sobrenome_cliente"]);
@@ -131,7 +131,7 @@ function __autoload($class_name) {
                     </div>
                 </div> <br />
                 <button type="reset" class="btn btn-danger"> <i class="fa fa-times"></i> Cancelar</button>
-                <button type="submit"  name="cadastrar" class="btn btn-success"> <i class="fa fa-user-plus"></i> Incluir</button>
+                <button type="submit"  name="incluir" class="btn btn-success"> <i class="fa fa-user-plus"></i> Incluir</button>
                 </form>
             </div>
         </div>

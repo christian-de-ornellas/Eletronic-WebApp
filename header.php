@@ -90,12 +90,12 @@
 <aside >
 	<div class="list-group">
   <a href="#" class="list-group-item active">
-      <p>Ferramentas</p>
+      <p><i class="glyphicon glyphicon-wrench"></i> Ferramentas</p>
   </a>
-  <a href="#" class="list-group-item">Cadastrar cupon</a>
-  <a href="#" class="list-group-item">2ª via de cupon</a>
-  <a href="cadastrar-clientes" class="list-group-item">Cadastrar cliente</a>
-  <a href="gerar-cupon" class="list-group-item">Gerar um cupon</a>
+  <a href="gerar-cupon" class="list-group-item"><i class="glyphicon glyphicon-barcode"></i> Gerar um cupon</a>
+  <a href="#" class="list-group-item"><i class=" glyphicon glyphicon-compressed"></i> 2ª via de cupon</a>
+  <a href="cadastrar-clientes" class="list-group-item"><i class="glyphicon glyphicon-user"></i> Cadastrar cliente</a>
+  <a href="gerar-cupon" class="list-group-item"> <i class="glyphicon glyphicon-circle-arrow-up "></i> Downloads</a>
 </div>
 </aside>
 <section>
