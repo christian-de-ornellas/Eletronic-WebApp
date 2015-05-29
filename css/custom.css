@@ -64,3 +64,27 @@ width: 870px !important;
     height: 200px;
     
 }
+
+
+/*
+Cupon*/
+
+.table-cupon{
+    
+    width: 230px;
+    height: auto;
+   
+}
+.td-cupon{
+   
+    background: #000;
+    color: #eee;
+    margin-top: 2px;
+     padding-top: 5px;
+    padding-left:  1px;
+    padding-right: 1px;
+    padding-bottom: 5px;
+    
+    
+    
+}
