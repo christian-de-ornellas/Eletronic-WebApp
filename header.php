@@ -90,10 +90,10 @@
 <aside >
 	<div class="list-group">
   <a href="#" class="list-group-item active">
-    Ferramentas
+      <p>Ferramentas</p>
   </a>
-  <a href="#" class="list-group-item">Cadastrar cumpon</a>
-  <a href="#" class="list-group-item">Imprimir cupons</a>
+  <a href="#" class="list-group-item">Cadastrar cupon</a>
+  <a href="#" class="list-group-item">2ª via de cupon</a>
   <a href="cadastrar-clientes" class="list-group-item">Cadastrar cliente</a>
   <a href="gerar-cupon" class="list-group-item">Gerar um cupon</a>
 </div>

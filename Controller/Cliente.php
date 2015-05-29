@@ -100,6 +100,7 @@ function getFacebook_cliente() {
 
 function setNome_cliente($nome_cliente) {
     $this->nome_cliente = $nome_cliente;
+   
 }
 
 function setSobrenome_cliente($sobrenome_cliente) {
