@@ -64,10 +64,10 @@ function __autoload($class_name) {
                     ?>
 
                     <form action="" method="post">  
-                        <input type="text" name="nome_cliente" class="form-control" placeholder="Nome">
+                        <input type="text" name="nome_cliente" class="form-control" required="" placeholder="Nome">
                         </div>
                         <div class="col-xs-4">
-                            <input type="text" name="sobrenome_cliente" class="form-control" placeholder="Sobrenome">
+                            <input type="text" name="sobrenome_cliente" class="form-control" required="" placeholder="Sobrenome">
                         </div>
                         <div class="col-xs-4">
                             <input type="text" name="email_cliente" class="form-control" placeholder="E-mail">
@@ -79,10 +79,10 @@ function __autoload($class_name) {
                         <input type="text" name="nasc_cliente" class="form-control" placeholder="Nascimento">
                     </div>
                     <div class="col-xs-3">
-                        <input type="text" name="cpf_cliente" class="form-control" placeholder="Cpf">
+                        <input type="text" name="cpf_cliente" class="form-control" required="" placeholder="Cpf">
                     </div>
                     <div class="col-xs-3">
-                        <input type="text" name="rg_cliente" class="form-control" placeholder="Rg">
+                        <input type="text" name="rg_cliente" class="form-control" required="" placeholder="Rg">
                     </div>
                     <div class="col-xs-4">
                         <input type="text" name="nomepai_cliente" class="form-control" placeholder="Nome do pai">
@@ -94,13 +94,13 @@ function __autoload($class_name) {
                         <input type="text" name="nomemae_cliente" class="form-control" placeholder="Nome da mae">
                     </div>
                     <div class="col-xs-3">
-                        <input type="text" name="tel_cliente" class="form-control" placeholder="Telefone fixo">
+                        <input type="text" name="tel_cliente" class="form-control" required="" placeholder="Telefone fixo">
                     </div>
                     <div class="col-xs-3">
-                        <input type="text" name="cel_cliente" class="form-control" placeholder="Celular">
+                        <input type="text" name="cel_cliente" class="form-control" required="" placeholder="Celular">
                     </div>
                     <div class="col-xs-3">
-                        <input type="text" name="cep_cliente" class="form-control" placeholder="Cep">
+                        <input type="text" name="cep_cliente" class="form-control" required="" placeholder="Cep">
                     </div>
                 </div> <br />
 
@@ -136,4 +136,5 @@ function __autoload($class_name) {
             </div>
         </div>
 </aside>
+
 <?php include'bottom.php' ?>

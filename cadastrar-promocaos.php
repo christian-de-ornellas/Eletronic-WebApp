@@ -42,7 +42,7 @@ function __autoload($class_name) {
             <form action="" method="post">
                 <div class="row">
                     <div class="col-xs-4">
-                        <input type="text" name="promocao" class="form-control" placeholder="Nome da promoção">
+                        <input type="text" name="promocao" required="" class="form-control" placeholder="Nome da promoção">
                     </div>
                     <div class="col-xs-4">
                         <input type="text" name="data" class="form-control" readonly value="<?php

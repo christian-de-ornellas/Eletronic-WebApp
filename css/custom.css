@@ -53,3 +53,14 @@ margin-top:8px;
 margin-left: 16px;
 width: 870px !important;
 }
+
+.footer-bottom{
+    color: #bbb;
+    text-align: center;
+    margin-top: 20px;
+    margin-right:220px;
+    float: right;
+    width: 600px;
+    height: 200px;
+    
+}
