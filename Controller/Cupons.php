@@ -129,5 +129,15 @@ class Cupons extends Crud {
         $stmt->execute();
         return $stmt->fetchAll();
     }
+    
+    public function VerificarParticipante($id){
+      
+        $sql = "SELECT * FROM $this->table WHERE id = :id, ";
+        $stmt = DB::prepare($sql);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetch();
+        
+    }
 
 }

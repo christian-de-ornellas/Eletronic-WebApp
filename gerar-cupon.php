@@ -12,6 +12,7 @@ function __autoload($class_name) {
 // Instanciando o objeto Cliente & Promocao
 $clientes = new Cliente();
 $promocaos = new Promocao();
+$cupons = new Cupons();
 ?>
 <?php
 // Aqui e realizado uma comparação, onde se existir um $_POST  ele executa as funções abaixo//
@@ -29,6 +30,14 @@ if (isset($_POST['GerarCupon'])):
     $obs_cupon = trim($_POST["obs_cupon"]);
     $aceitar_email = trim($_POST["aceitar_email"]);
 //Aqui é setado as variavés que estão locado na memória//
+   
+    foreach ($cupons->relcupom() as $key =>$verificado):
+    if(isset($this->nome_cliente) > 0 ){
+        
+        echo"Cadastro invalido, cliente já cadastrado";
+    }
+    
+  
     $gerador->setCliente_id($cliente_id);
     $gerador->setPromocao_id($promocao_id);
     $gerador->setNotafiscal($notafiscal);
