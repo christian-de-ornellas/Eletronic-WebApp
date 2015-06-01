@@ -1,6 +1,6 @@
 <?php
 
-require_once 'D:\servidor\htdocs\maza-box\Controller\DB.php';
+require_once 'G:\ChristianWebDeveloper\server\htdocs\maza-box\Controller\DB.php';
 
 abstract class Crud extends DB {
 
@@ -23,6 +23,12 @@ abstract class Crud extends DB {
         $stmt = DB::prepare($sql);
         $stmt->execute();
         return $stmt->fetchAll();
+    }
+    
+    public function rel(){
+        $sql="";
+        $stmt = DB::prepare($sql);
+        
     }
 
     public function delete($id) {
