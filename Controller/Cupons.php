@@ -114,5 +114,18 @@ public function insert(){
     public function update($id) {
         
     }
+//FROM cupons
+//INNER JOIN 
+//clientes ON   cupons.cliente_id = clientes.id
+//INNER JOIN 
+//promocoes ON   cupons.promocao_id = promocoes.id
+
+    public function relcupom(){
+        
+        $sql="SELECT * FROM $this->table INNER JOIN clientes ON $this->table.cliente_id = clientes.id INNER JOIN promocoes ON $this->table ON cupons.promocao_id = promocoes.id";
+        $stmt = DB::prepare($sql);
+        $stmt->execute;
+        return $stmt->relcupom(); 
+    }
 
 }

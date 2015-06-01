@@ -5,6 +5,7 @@ require_once 'G:\ChristianWebDeveloper\server\htdocs\maza-box\Controller\DB.php'
 abstract class Crud extends DB {
 
     protected $table;
+   
 
     abstract public function insert();
 
@@ -24,13 +25,6 @@ abstract class Crud extends DB {
         $stmt->execute();
         return $stmt->fetchAll();
     }
-    
-    public function rel(){
-        $sql="";
-        $stmt = DB::prepare($sql);
-        
-    }
-
     public function delete($id) {
         $sql = "DELETE FROM $this->table WHERE id = :id";
         $stmt = DB::prepare($sql);
