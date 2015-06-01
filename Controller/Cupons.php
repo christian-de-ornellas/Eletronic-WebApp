@@ -117,14 +117,14 @@ class Cupons extends Crud {
 
     public function relcupom() {
 
-        $sql = "SELECT `cupons`.`id`, `clientes`.`nome_cliente`, `clientes`.`email_cliente`,
-  `clientes`.`cpf_cliente`, `clientes`.`tel_cliente`, `clientes`.`cel_cliente`,
-  `promocoes`.`promocao` 
-   FROM
-  `clientes`, `cupons`, `promocoes`;"
-               
-                
-                ;
+        $sql = "SELECT cupons.id, promocao, nome_cliente, cpf_cliente, email_cliente, tel_cliente, cel_cliente 
+               FROM $this->table
+               INNER JOIN 
+               clientes ON   cupons.cliente_id = clientes.id
+               INNER JOIN 
+               promocoes ON   cupons.promocao_id = promocoes.id
+               WHERE cupons.id
+               ";
         $stmt = DB::prepare($sql);
         $stmt->execute();
         return $stmt->fetchAll();
