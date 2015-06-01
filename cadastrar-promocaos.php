@@ -5,7 +5,7 @@ function __autoload($class_name) {
     require'Controller/' . $class_name . '.php';
 }
 ?>
-
+<?php require_once './ferramentas.php'; ?>
 <aside class="asside-right">
     <div class="panel panel-default">
         <div class="panel-heading">Preencha o formulário de promoção</div>
@@ -39,6 +39,7 @@ function __autoload($class_name) {
                 }
             endif;
             ?>
+            
             <form action="" method="post">
                 <div class="row">
                     <div class="col-xs-4">

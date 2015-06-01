@@ -41,13 +41,13 @@ if (isset($_POST['GerarCupon'])):
 //Aqui ele realiza outra comparação, se existir $gerador e método insert ele executa as 
 //funções abaixo. Se gravar no banco de dados ele imprime sucesso na tela, se não e imprime a mensagem de erro e não grava no banco.//
     if ($gerador->insert()) {
-        echo"Parabéns,{$this->nome_cliente} o seu cupon foi gerado com sucesso";
+        echo"Parabéns, o seu cupon foi gerado com sucesso";
     } else {
         echo"Erro, o seu cupon não pode ser gerado";
     }
 endif;
 ?>
-
+<?php require_once './ferramentas.php'; ?>
 <!--formulário do gerador de cupom-->
 <aside class="asside-right">
     <div class="panel panel-default">

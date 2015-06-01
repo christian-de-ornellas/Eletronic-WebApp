@@ -5,6 +5,7 @@ function __autoload($class_name) {
     require_once 'Controller/' . $class_name . '.php';
 }
 ?>
+<?php require_once './ferramentas.php'; ?>
 <aside class="asside-right">
     <div class="panel panel-default">
         <div class="panel-heading">Preencha o formulário com os dados do cliente</div>
