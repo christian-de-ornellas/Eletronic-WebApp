@@ -6,7 +6,7 @@
  * HTML5 & PHP - ELETRONIC -
   ANALISTA DESENVOLVEDOR  -CHRISTIAN DE ORNELLAS POSSIDONIO now
  */
-require_once'G:\ChristianWebDeveloper\server\htdocs\maza-box\Controller\Crud.php';
+require_once'D:\servidor\htdocs\maza-box\Controller\Crud.php';
 
 class Promocao extends Crud {
 

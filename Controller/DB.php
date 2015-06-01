@@ -1,6 +1,6 @@
 <?php
 
-require_once 'G:\ChristianWebDeveloper\server\htdocs\maza-box\Controller\config.php';
+require_once 'D:\servidor\htdocs\maza-box\Controller\config.php';
 
 class DB{
 

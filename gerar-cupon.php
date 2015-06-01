@@ -6,9 +6,9 @@ function __autoload($class_name) {
     require'Controller/' . $class_name . '.php';
 }
 ?>
-    
-    
-    <?php
+
+
+<?php
 // Instanciando o objeto Cliente & Promocao
 $clientes = new Cliente();
 $promocaos = new Promocao();
@@ -40,13 +40,15 @@ if (isset($_POST['GerarCupon'])):
     $gerador->setAceitar_email($aceitar_email);
 //Aqui ele realiza outra comparação, se existir $gerador e método insert ele executa as 
 //funções abaixo. Se gravar no banco de dados ele imprime sucesso na tela, se não e imprime a mensagem de erro e não grava no banco.//
-    if ($gerador->insert()) { 
-        echo"Parabéns, o seu cupon foi gerado com sucesso";
-    }else{
-         echo"Erro, o seu cupon não pode ser gerado";
-    }   
-    endif;
+    if ($gerador->insert()) {
+        echo"Parabéns,{$this->nome_cliente} o seu cupon foi gerado com sucesso";
+    } else {
+        echo"Erro, o seu cupon não pode ser gerado";
+    }
+endif;
 ?>
+
+<!--formulário do gerador de cupom-->
 <aside class="asside-right">
     <div class="panel panel-default">
         <div class="panel-heading">Gerador de cupon</div>
@@ -54,6 +56,7 @@ if (isset($_POST['GerarCupon'])):
             <form action="" method="post">
                 <div class="row">
                     <div class="col-xs-4">
+                        <!--                        Aqui o foreach da um loop da tabela clientes para seleciona-lo-->
                         <select name="cliente_id"  class="form-control" required="">
                             <option value="">Selecione um cliente</option>
                             <?php foreach ($clientes->findAll() as $key => $value): ?>
@@ -63,6 +66,7 @@ if (isset($_POST['GerarCupon'])):
                     </div>
 
                     <div class="col-xs-4">
+                        <!--                        Aqui o foreach da um loop da tabela promoções para seleciona-lo-->
                         <select name="promocao_id" required="" readonly class="form-control">
                             <option value="">Selecione uma promoção</option>
                             <?php foreach ($promocaos->findAll() as $key => $values): ?>
@@ -83,14 +87,14 @@ if (isset($_POST['GerarCupon'])):
                     <div class="col-xs-3">
                         <input type="text" name="valor_compra" required="" class="form-control" placeholder="Valor da compra">
                     </div>
-
+<!--                    Aqui a variavel o sistema reconhece a data atual do servidor-->
                     <div class="col-xs-2">
                         <input type="text" name="data_cupons" class="form-control" readonly value="<?php
                         $data = date("d/m/Y");
                         echo $data;
                         ?>">
                     </div>
-
+<!--                    Aqui a variavel o sistema reconhece a hora atual do servidor-->
                     <div class="col-xs-2">
                         <input type="text" name="hora_cupons" class="form-control" readonly  value="<?php
                         $Hora = date("h:i:s");
@@ -101,25 +105,25 @@ if (isset($_POST['GerarCupon'])):
                     <textarea class="form-control" name="obs_cupon" rows="4" placeholder="Digite uma observação ou anotação importante caso precise." ></textarea>
 
 
-                        <label>
-                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="radio" value="sim" name="aceitar_email"> <span class="label label-default">Eu aceito receber informações e promoções do MazaBox.</span>
-                        </label>
-                    
-                        <label>
-                            &nbsp; &nbsp; &nbsp;<input type="radio" value="nao" name="aceitar_email"> <span class="label label-danger">Eu não aceito receber informações e promoções do MazaBox.</span>
-                        </label>
-                    </div>
+                    <label>
+                        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="radio" value="sim" name="aceitar_email"> <span class="label label-default">Eu aceito receber informações e promoções do MazaBox.</span>
+                    </label>
 
-                </div> <br />
+                    <label>
+                        &nbsp; &nbsp; &nbsp;<input type="radio" value="nao" name="aceitar_email"> <span class="label label-danger">Eu não aceito receber informações e promoções do MazaBox.</span>
+                    </label>
+                </div>
 
-                <button type="reset" class="btn btn-danger"> <i class="fa fa-times"></i> Cancelar</button>
-                <button type="submit" name="GerarCupon" class="btn btn-success"> <i class="glyphicon glyphicon-barcode"></i> Gerar um cupon</button>
-                <a href="cadastrar-promocaos"  class="btn btn-primary"> <i class="glyphicon glyphicon-shopping-cart"></i> Add promoção</a>
-                <a href="cadastrar-clientes" class="btn btn-primary"> <i class="fa fa-user-plus"></i> Add Cliente</a>
+        </div> <br />
 
-            </form>
-        </div>
+        <button type="reset" class="btn btn-danger"> <i class="fa fa-times"></i> Cancelar</button>
+        <button type="submit" name="GerarCupon" class="btn btn-success"> <i class="glyphicon glyphicon-barcode"></i> Gerar um cupon</button>
+        <a href="cadastrar-promocaos"  class="btn btn-primary"> <i class="glyphicon glyphicon-shopping-cart"></i> Add promoção</a>
+        <a href="cadastrar-clientes" class="btn btn-primary"> <i class="fa fa-user-plus"></i> Add Cliente</a>
+
+        </form>
     </div>
+</div>
 </aside>
 
 
