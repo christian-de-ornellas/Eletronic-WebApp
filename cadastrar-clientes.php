@@ -10,7 +10,7 @@ function __autoload($class_name) {
 
 
 <aside class="asside-right">
-    <div class="panel panel-info">
+    <div class="panel panel-success">
         <div class="panel-heading">Preencha o formulário com os dados do cliente</div>
         <div class="panel-body">
 
@@ -60,7 +60,9 @@ function __autoload($class_name) {
 
 
                         if ($cliente->insert()) {
-                            echo "Inserido com sucesso!";
+                            echo '<script type="text/javascript">alert(" Cliente cadastrado com sucesso")</script>';
+                        }  else {
+                              echo"<script type='text/javascript'>O Cliente não pode ser cadastrado tente novamento ou entre em contato com o suporte</script>";    
                         }
 
                     endif;
@@ -110,22 +112,22 @@ function __autoload($class_name) {
 
                 <div class="row">
                     <div class="col-xs-4">
-                        <input type="text" name="rua_cliente" class="form-control" id="rua" placeholder="Rua">
+                        <input type="text" name="rua_cliente" class="form-control" id="rua" placeholder="Rua" readonly >
                     </div>
                     <div class="col-xs-1">
                         <input type="text" name="num_cliente" class="form-control" id="num" placeholder="Nº">
                     </div>
                     <div class="col-xs-3">
-                        <input type="text" name="cidade_cliente" class="form-control" id="cidade" placeholder="Cidade">
+                        <input type="text" name="cidade_cliente" class="form-control" id="cidade" placeholder="Cidade" readonly >
                     </div>
                     <div class="col-xs-4">
-                        <input type="text" name="bairro_cliente" class="form-control" id="bairro" placeholder="Bairro">
+                        <input type="text" name="bairro_cliente" class="form-control" id="bairro" placeholder="Bairro" readonly >
                     </div>
                 </div> <br />
 
                 <div class="row">
                     <div class="col-xs-4">
-                        <input type="text" name="estado_cliente" class="form-control" id="uf" placeholder="Estado">
+                        <input type="text" name="estado_cliente" class="form-control" id="uf" placeholder="Estado" readonly >
                     </div>
                     <div class="col-xs-4">
                         <input type="text" name="complemento_cliente" class="form-control" placeholder="Complemento">

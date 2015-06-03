@@ -25,9 +25,9 @@ function __autoload($class_name) {
                 $promocoes->setHora($hora);
                 
                 if ($promocoes->insert()) {
-                    echo"A Promoção ${promocao} Foi Inserida Com Sucesso";
+                    echo '<script type="text/javascript">alert(" Promoção publicada com sucesso.")</script>';
                 } else {
-                    echo"A ${promocao} Não Pode Ser Inserida!";
+                    echo '<script type="text/javascript">alert("Desculpe, ocorreu um erro entre em contato com o suporte ou tente denovo!")</script>';
                 }
             endif;
             ?>
@@ -53,14 +53,31 @@ function __autoload($class_name) {
 
                 <button type="reset" class="btn btn-danger"> <i class="fa fa-times"></i>Cancelar</button>
                 <button type="submit" name="cadastrar" class="btn btn-success"> <i class="fa fa-user-plus"></i> Incluir</button>
-
+<table class="table table-hover">
+                <tr>
+                    <th>CODIGO</th>
+                    <th>PROMOÇÃO</th>
+                    <th>DATA</th>
+                    <th>HORA</th>
+                  <!--  <th>AÇÃO</th>-->
+                </tr>
+<?php foreach ($promocoes->findAll() as $key => $value): ?>
+                    <tr>
+                        <td><?php echo $value->id; ?></td>
+                        <td><?php echo $value->promocao; ?></td>
+                        <td><?php echo $value->data; ?> </td>
+                        <td><?php echo $value->hora; ?></td> 
+                   <!-- <td><a>Editar</a></td>
+                        <td><a>Excluir</a></td>-->
+                        </div>
+                        </div> 
+                    </tr>
+<?php endforeach; ?>
+            </table>
         </div>
     </div>
-</form>
+</form>     
+            
 </aside>
-
-
-
-
 
 <?php include'bottom.php'; ?>
