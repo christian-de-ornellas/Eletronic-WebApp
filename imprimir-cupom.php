@@ -1,3 +1,5 @@
+<!--HTML5 & PHP - ELETRONIC -
+ANALISTA DESENVOLVEDOR  -CHRISTIAN DE ORNELLAS POSSIDONIO--->
 
 <!--Script serve para poder abrir a tela de impressão assim que carregar a página -->
 
@@ -22,8 +24,10 @@ else
    window.onload = window.print; // helps with Opera
    }
    }  </script>
-<!--HTML5 & PHP - ELETRONIC -
-ANALISTA DESENVOLVEDOR  -CHRISTIAN DE ORNELLAS POSSIDONIO--->
+
+<!--Final do script -->
+
+
 <link rel="stylesheet" type="text/css" href="css/custom.css">
 <link rel="alternate" type="text/css" midia="print" href="css/imprimir.css">
 <?php
