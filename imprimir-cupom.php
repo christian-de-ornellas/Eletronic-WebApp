@@ -53,7 +53,9 @@ function __autoload($class_name) {
         <td class="bordas"><p>
         <b>Nome: <?php echo $value->nome_cliente; ?> <?php echo $value->sobrenome_cliente; ?><br>
             E-mail: <?php echo $value->email_cliente; ?> <br>
-            Rg:  <?php echo $value->rg_cliente; ?></p></b>
+            Rg:  <?php echo $value->rg_cliente; ?></b><br />
+                
+                <b><?php echo $value->tel_cliente; ?> | <?php echo $value->tel_cliente; ?></p></b>
     </td>
     
     </tr>           

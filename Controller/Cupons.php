@@ -141,7 +141,7 @@ FROM
 
         $sql = "SELECT
   `cupons`.`id`, `clientes`.`nome_cliente`, `clientes`.`sobrenome_cliente`,
-  `clientes`.`rg_cliente`, `promocoes`.`promocao`,`email_cliente`
+  `clientes`.`rg_cliente`, `promocoes`.`promocao`,`email_cliente`,`tel_cliente`,`cel_cliente`
 FROM
   `clientes`, `cupons`, `promocoes`
    LIMIT 1";
