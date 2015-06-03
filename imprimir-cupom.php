@@ -7,7 +7,7 @@ ANALISTA DESENVOLVEDOR  -CHRISTIAN DE ORNELLAS POSSIDONIO--->
 print();
 }
 function chromePrintDelay(){
-setTimeout("print()", 500);
+setTimeout("print()", 100);
 }
 var browserName=navigator.appName;
 if (browserName=="Microsoft Internet Explorer")

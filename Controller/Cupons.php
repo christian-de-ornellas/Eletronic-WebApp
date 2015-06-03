@@ -141,10 +141,14 @@ FROM
 
         $sql = "SELECT
   `cupons`.`id`, `clientes`.`nome_cliente`, `clientes`.`sobrenome_cliente`,
-  `clientes`.`rg_cliente`, `promocoes`.`promocao`,`email_cliente`,`tel_cliente`,`cel_cliente`
+  `clientes`.`email_cliente`, `clientes`.`rg_cliente`, `clientes`.`tel_cliente`,
+  `clientes`.`cel_cliente`, `promocoes`.`promocao`
 FROM
-  `clientes`, `cupons`, `promocoes`
-   LIMIT 1";
+  `cupons`, `promocoes`, `clientes`
+ORDER BY
+  `cupons`.`id` DESC
+  LIMIT 1
+  ";
         $stmt = DB::prepare($sql);
         $stmt->execute();
         return $stmt->fetchAll();
