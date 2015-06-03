@@ -55,7 +55,7 @@ function __autoload($class_name) {
             E-mail: <?php echo $value->email_cliente; ?> <br>
             Rg:  <?php echo $value->rg_cliente; ?></b><br />
                 
-                <b><?php echo $value->tel_cliente; ?> | <?php echo $value->tel_cliente; ?></p></b>
+                <b>Tels:<?php echo $value->tel_cliente;?>\<?php echo $value->cel_cliente;?></p></b>
     </td>
     
     </tr>           
