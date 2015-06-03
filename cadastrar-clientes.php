@@ -155,3 +155,4 @@ function __autoload($class_name) {
         </div>
 </aside>
 
+<?php require_once 'bottom.php'; ?>

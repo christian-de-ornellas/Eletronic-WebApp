@@ -52,3 +52,4 @@ $cupons = new Cupons();
             </table>
         </div>
     </div>
+<?php require_once 'bottom.php'; ?>

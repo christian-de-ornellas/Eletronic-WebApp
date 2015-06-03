@@ -38,7 +38,9 @@ if (isset($_POST['GerarCupon'])):
 //Aqui ele realiza outra comparação, se existir $gerador e método insert ele executa as 
 //funções abaixo. Se gravar no banco de dados ele imprime sucesso na tela, se não e imprime a mensagem de erro e não grava no banco.//
     if ($gerador->insert()) {
-        echo"Parabéns, o seu cupon foi gerado com sucesso";
+        //Redirecionamento de link pelo java script//
+        echo'<script language= "JavaScript">
+location.href="imprimir-cupom"</script>';
     } else {
         echo"Erro, o seu cupon não pode ser gerado";
     }

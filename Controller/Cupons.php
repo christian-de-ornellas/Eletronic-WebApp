@@ -117,13 +117,13 @@ class Cupons extends Crud {
 
     public function relcupom() {
 
-        $sql = "SELECT cupons.id, promocao, nome_cliente, cpf_cliente, email_cliente, tel_cliente, cel_cliente 
-               FROM $this->table
-               INNER JOIN 
-               clientes ON   cupons.cliente_id = clientes.id
-               INNER JOIN 
-               promocoes ON   cupons.promocao_id = promocoes.id
-               WHERE cupons.id";
+        $sql = "SELECT
+  `cupons`.`id`, `promocoes`.`promocao`, `clientes`.`nome_cliente`,
+  `clientes`.`cpf_cliente`, `clientes`.`email_cliente`,
+  `clientes`.`tel_cliente`, `clientes`.`cel_cliente`
+FROM
+  `clientes`, `cupons`, `promocoes`
+  order by cupons.id";
         $stmt = DB::prepare($sql);
         $stmt->execute();
         return $stmt->fetchAll();
@@ -137,5 +137,16 @@ class Cupons extends Crud {
         $stmt->execute();
         return $stmt->fetch();
     }
+ public function ImprimirCupom() {
 
+        $sql = "SELECT
+  `cupons`.`id`, `clientes`.`nome_cliente`, `clientes`.`sobrenome_cliente`,
+  `clientes`.`rg_cliente`, `promocoes`.`promocao`,`email_cliente`
+FROM
+  `clientes`, `cupons`, `promocoes`
+   LIMIT 1";
+        $stmt = DB::prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
 }
