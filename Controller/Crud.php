@@ -1,6 +1,5 @@
 <?php
-
-require_once 'G:\ChristianWebDeveloper\server\htdocs\maza-box\Controller\DB.php';
+require_once'G:\ChristianWebDeveloper\server\htdocs\Eletronic-Beta-1.0\Controller\DB.php';
 
 abstract class Crud extends DB {
 

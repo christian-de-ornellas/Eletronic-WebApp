@@ -2,7 +2,7 @@
 /**
 * Classe de cliente
 */
-require_once 'G:\ChristianWebDeveloper\server\htdocs\maza-box\Controller\Crud.php';
+require_once 'G:\ChristianWebDeveloper\server\htdocs\Eletronic-Beta-1.0\Controller\Crud.php';
 
 class Cliente extends Crud{
 	

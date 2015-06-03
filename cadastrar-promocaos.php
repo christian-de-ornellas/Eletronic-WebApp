@@ -19,15 +19,7 @@ function __autoload($class_name) {
                 $promocao = trim($_POST["promocao"]);
                 $data = trim($_POST["data"]);
                 $hora = trim($_POST["hora"]);
-                
-//                if ($promocao == "") {
-//                    echo "Erro, o campo promoção precisa ser preenchido! <a href='cadastrar-promocaos'>tentar novamente</a>";
-//                    return false;
-//                }elseif ($promocao  < 3){                   
-//                     echo "Erro, o campo promoção precisa ter no maximo 3 caracteres! <a href='cadastrar-promocaos'>tentar novamente</a>";
-//                    return false;   
-//                }]
-                
+
                 $promocoes->setPromocao($promocao);
                 $promocoes->setData($data);
                 $promocoes->setHora($hora);
@@ -59,7 +51,7 @@ function __autoload($class_name) {
                     </div>
                 </div> <br />
 
-                <button type="reset" class="btn btn-danger"> <i class="fa fa-times"></i> Cancelar</button>
+                <button type="reset" class="btn btn-danger"> <i class="fa fa-times"></i>Cancelar</button>
                 <button type="submit" name="cadastrar" class="btn btn-success"> <i class="fa fa-user-plus"></i> Incluir</button>
 
         </div>

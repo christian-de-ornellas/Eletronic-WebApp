@@ -1,13 +1,30 @@
 <?php include'header.php' ?>
+
+<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="http://code.jquery.com/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="js/cep.js" type="text/javascript"></script>
+<script src="js/gmaps.js" type="text/javascript"></script>
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/markers.js" type="text/javascript"></script>
+<script>
+    $(function () {
+        wscep({map: 'map1', auto: true});
+        wsmap('08615-000', '555', 'map2');
+    })
+</script>
+
 <?php
 
 function __autoload($class_name) {
     require_once 'Controller/' . $class_name . '.php';
 }
 ?>
-<?php require_once './ferramentas.php'; ?>
+<?php require_once 'ferramentas.php'; ?>
+
+
+
 <aside class="asside-right">
-    <div class="panel panel-default">
+    <div class="panel panel-info">
         <div class="panel-heading">Preencha o formulário com os dados do cliente</div>
         <div class="panel-body">
 
@@ -15,7 +32,6 @@ function __autoload($class_name) {
                 <div class="col-xs-4">
                     <?php
                     $cliente = new Cliente();
-
                     if (isset($_POST['incluir'])):
 
                         $nome_cliente = trim($_POST["nome_cliente"]);
@@ -57,7 +73,7 @@ function __autoload($class_name) {
                         $cliente->setFacebook_cliente($facebook_cliente);
 
 
-                        if ($cliente->insert()){
+                        if ($cliente->insert()) {
                             echo "Inserido com sucesso!";
                         }
 
@@ -77,52 +93,53 @@ function __autoload($class_name) {
 
                 <div class="row">
                     <div class="col-xs-2">
-                        <input type="text" name="nasc_cliente" class="form-control" placeholder="Nascimento">
+                        <input type="text" name="nasc_cliente" id="nasc" class="form-control" placeholder="Nascimento">
                     </div>
                     <div class="col-xs-3">
-                        <input type="text" name="cpf_cliente" class="form-control" required="" placeholder="Cpf">
+                        <input type="text" name="cpf_cliente" class="form-control" required="" placeholder="Cpf" id="cpf">
                     </div>
                     <div class="col-xs-3">
-                        <input type="text" name="rg_cliente" class="form-control" required="" placeholder="Rg">
+                        <input type="text" name="rg_cliente" id="rg" class="form-control" required="" placeholder="Rg">
                     </div>
                     <div class="col-xs-4">
                         <input type="text" name="nomepai_cliente" class="form-control" placeholder="Nome do pai">
                     </div>
-                </div> <br />
+                </div> 
+                <br />
 
                 <div class="row">
                     <div class="col-xs-3">
                         <input type="text" name="nomemae_cliente" class="form-control" placeholder="Nome da mae">
                     </div>
                     <div class="col-xs-3">
-                        <input type="text" name="tel_cliente" class="form-control" required="" placeholder="Telefone fixo">
+                        <input type="text" name="tel_cliente" id="tel" class="form-control" required="" placeholder="Telefone fixo">
                     </div>
                     <div class="col-xs-3">
-                        <input type="text" name="cel_cliente" class="form-control" required="" placeholder="Celular">
+                        <input type="text" name="cel_cliente" id="cel" class="form-control" required="" placeholder="Celular">
                     </div>
                     <div class="col-xs-3">
-                        <input type="text" name="cep_cliente" class="form-control" required="" placeholder="Cep">
+                        <input type="text" name="cep_cliente" id="cep" class="form-control" required="" placeholder="Cep" >
                     </div>
                 </div> <br />
 
                 <div class="row">
                     <div class="col-xs-4">
-                        <input type="text" name="rua_cliente" class="form-control" placeholder="Rua">
+                        <input type="text" name="rua_cliente" class="form-control" id="rua" placeholder="Rua">
                     </div>
                     <div class="col-xs-1">
-                        <input type="text" name="num_cliente" class="form-control" placeholder="Nº">
+                        <input type="text" name="num_cliente" class="form-control" id="num" placeholder="Nº">
                     </div>
                     <div class="col-xs-3">
-                        <input type="text" name="cidade_cliente" class="form-control" placeholder="Cidade">
+                        <input type="text" name="cidade_cliente" class="form-control" id="cidade" placeholder="Cidade">
                     </div>
                     <div class="col-xs-4">
-                        <input type="text" name="bairro_cliente" class="form-control" placeholder="Bairro">
+                        <input type="text" name="bairro_cliente" class="form-control" id="bairro" placeholder="Bairro">
                     </div>
                 </div> <br />
 
                 <div class="row">
                     <div class="col-xs-4">
-                        <input type="text" name="estado_cliente" class="form-control" placeholder="Estado">
+                        <input type="text" name="estado_cliente" class="form-control" id="uf" placeholder="Estado">
                     </div>
                     <div class="col-xs-4">
                         <input type="text" name="complemento_cliente" class="form-control" placeholder="Complemento">
@@ -138,4 +155,3 @@ function __autoload($class_name) {
         </div>
 </aside>
 
-<?php include'bottom.php' ?>

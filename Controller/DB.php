@@ -1,6 +1,6 @@
 <?php
 
-require_once 'G:\ChristianWebDeveloper\server\htdocs\maza-box\Controller\config.php';
+require_once 'G:\ChristianWebDeveloper\server\htdocs\Eletronic-Beta-1.0\Controller\config.php';
 
 class DB{
 
@@ -17,7 +17,6 @@ class DB{
 			} catch (PDOException $e) {
 				echo $e->getMessage();
 			}
-
 		}
 
 		return self::$instance;

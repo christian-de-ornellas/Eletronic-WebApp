@@ -1,7 +1,7 @@
 
 </section>
 <footer class="footer-bottom"> 
- @copyright 2015  Gerador de cupon - Versão Beta 1.0 desenvolvido por  Eletronic 
+ @copyright 2015  Cupom System - Versão Beta 1.0 desenvolvido por  Eletronic 
 
 </footer>  
 </div>

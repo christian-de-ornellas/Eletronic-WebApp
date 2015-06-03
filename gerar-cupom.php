@@ -1,13 +1,9 @@
 <?php include'header.php'; ?>
-
 <?php
-
 function __autoload($class_name) {
     require'Controller/' . $class_name . '.php';
 }
 ?>
-
-
 <?php
 // Instanciando o objeto Cliente & Promocao
 $clientes = new Cliente();
@@ -29,15 +25,7 @@ if (isset($_POST['GerarCupon'])):
     $hora_cupons = trim($_POST["hora_cupons"]);
     $obs_cupon = trim($_POST["obs_cupon"]);
     $aceitar_email = trim($_POST["aceitar_email"]);
-//Aqui é setado as variavés que estão locado na memória//
-   
-    foreach ($cupons->relcupom() as $key =>$verificado):
-    if(isset($this->nome_cliente) > 0 ){
-        
-        echo"Cadastro invalido, cliente já cadastrado";
-    }
-    
-  
+//Aqui é setado as variavés que estão locado na memória// 
     $gerador->setCliente_id($cliente_id);
     $gerador->setPromocao_id($promocao_id);
     $gerador->setNotafiscal($notafiscal);
@@ -56,11 +44,11 @@ if (isset($_POST['GerarCupon'])):
     }
 endif;
 ?>
-<?php require_once './ferramentas.php'; ?>
+<?php require_once 'ferramentas.php'; ?>
 <!--formulário do gerador de cupom-->
 <aside class="asside-right">
-    <div class="panel panel-default">
-        <div class="panel-heading">Gerador de cupon</div>
+    <div class="panel panel-info">
+        <div class="panel-heading">Preencha os dados para gerar um cupom</div>
         <div class="panel-body">
             <form action="" method="post">
                 <div class="row">
@@ -126,16 +114,11 @@ endif;
         </div> <br />
 
         <button type="reset" class="btn btn-danger"> <i class="fa fa-times"></i> Cancelar</button>
-        <button type="submit" name="GerarCupon" class="btn btn-success"> <i class="glyphicon glyphicon-barcode"></i> Gerar um cupon</button>
-        <a href="cadastrar-promocaos"  class="btn btn-primary"> <i class="glyphicon glyphicon-shopping-cart"></i> Add promoção</a>
+        <button type="submit" name="GerarCupon" class="btn btn-success"> <i class="glyphicon glyphicon-barcode"></i> Gerar um cupon</button>       
         <a href="cadastrar-clientes" class="btn btn-primary"> <i class="fa fa-user-plus"></i> Add Cliente</a>
 
         </form>
     </div>
 </div>
 </aside>
-
-
-
-
 <?php include'bottom.php'; ?>

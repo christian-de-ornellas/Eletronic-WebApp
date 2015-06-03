@@ -6,11 +6,11 @@
  * CLASS PHP - ELETRONIC -
   ANALISTA DESENVOLVEDOR  -CHRISTIAN DE ORNELLAS POSSIDONIO
  */
-require_once 'G:\ChristianWebDeveloper\server\htdocs\maza-box\Controller\Crud.php';
+require_once 'G:\ChristianWebDeveloper\server\htdocs\Eletronic-Beta-1.0\Controller\Crud.php';
 
 class Cupons extends Crud {
-
-    protected $table = 'cupons';
+    
+    protected $table ='cupons';
     private $cliente_id;
     private $promocao_id;
     private $notafiscal;
@@ -20,7 +20,7 @@ class Cupons extends Crud {
     private $hora_cupons;
     private $obs_cupon;
     private $aceitar_email;
-
+    
     function getCliente_id() {
         return $this->cliente_id;
     }
@@ -123,21 +123,19 @@ class Cupons extends Crud {
                clientes ON   cupons.cliente_id = clientes.id
                INNER JOIN 
                promocoes ON   cupons.promocao_id = promocoes.id
-               WHERE cupons.id
-               ";
+               WHERE cupons.id";
         $stmt = DB::prepare($sql);
         $stmt->execute();
         return $stmt->fetchAll();
     }
-    
-    public function VerificarParticipante($id){
-      
+
+    public function VerificarParticipante($id) {
+
         $sql = "SELECT * FROM $this->table WHERE id = :id, ";
         $stmt = DB::prepare($sql);
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->execute();
         return $stmt->fetch();
-        
     }
 
 }

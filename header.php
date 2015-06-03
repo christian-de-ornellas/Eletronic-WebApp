@@ -4,7 +4,7 @@
 <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>MazaBox</title>
+	<title>Eletronic:Cupom System</title>
 	  <link href="css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/custom.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
@@ -12,7 +12,7 @@
 </head>
 <body>
 <div class="container">
-<header><div class="header-logotipo"><img src="img/header.topo.png" ></div></header>
+    <header><img src="img/logo.png" width="320" ></header>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -23,7 +23,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><i class="fa fa-home"></i></a>
+      <a class="navbar-brand" href="painel"><i class="fa fa-home"></i></a>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -32,40 +32,42 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <i class=""></i><i class="fa fa-user-plus"></i></i> Novos <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="cadastrar-clientes">Cliente</a></li>
-            <li><a href="cadastrar-promocaos">Promoção</a></li>
+            <!-- <li><a href="cadastrar-promocaos">Promoção</a></li>
             <li class="divider"></li>
             <li><a href="gerar-cupon">Gerar um cupon</a></li>
             
             <li><a href="#">Separated link</a></li>
             <li class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
+            <li><a href="#">One more separated link</a></li>-->
           </ul>
         </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-folder-open"></i> Consultas<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Nome</a></li>
-            <li><a href="#">Cpf</a></li>
-            <li><a href="#">Rg</a></li>
-            <li class="divider"></li>
-            <li><a href="#">E-mail</a></li>
+            <li><a href="#">Cliente</a></li>
             <li class="divider"></li>
             <li><a href="#">Nota fiscal</a></li>
+            <li class="divider"></li>
+            <li><a href="listar-cupons">Cupom</a></li>
+           
           </ul>
         </li>
          <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <i class="fa fa-bar-chart"></i> Relatórios <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
+          <ul class="dropdown-menu" role="menu">         
             <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
+            <li><a href="#">Download</a></li>
             <li class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
+            <li><a href="#">Gráfico</a></li>
           </ul>
         </li>
-        <li><a href="#"><i class="fa fa-envelope-o"></i> Enviar e-mail ao suporte</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-envelope-o"></i> Suporte<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Enviar e-mail</a></li>
+          </ul>
+        </li>
+      
         
       </ul>
     

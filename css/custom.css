@@ -1,31 +1,39 @@
 body{
-
-
+background-image: url(../img/bg2.jpg);
+overflow-y: hidden;
+}
+aside {
+  margin-top: 20px;
+  width: 200px;
+  height: 250px;
+  background: #064B90;
+  padding: 10px 10px 10px 10px;
+  float: left;
+  padding-bottom: 1px;
 }
 
-.header-logotipo{
-
-width: 150px;
-height: 150px;
-}
-aside{
-margin-top: 20px;
-width: 200px;
-height: 250px;
-background: #eee;
-padding: 10px 10px 10px 10px;
-float: left;
-}
 
 header{
-
-	margin-bottom: 10px;
+width: 100%;
+height: 150px;
+padding-left: 20px;
+padding-top: 20px;
+background-image:url(../img/bgtp.jpg);
+background-size: 1129px;
+background-position:  right;
+margin-bottom: 40px;
+margin-top: 40px;
+border-radius: 5px;
+border: 6px #017DC5 solid;
+}
+header img{
+margin-top:20px;
 }
 
 .navbar-inverse{
 
-background: #3893CA;
-border-color: #3893AA;
+background: #216BB6;
+border: 5px #064B90 solid;
 
 
 }
@@ -82,3 +90,19 @@ width: 870px !important;
     border-radius: 12px;    
 }
 
+.dropdown-menu > li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857;
+    color: #017DC5 !important;
+    white-space: nowrap;
+}
+
+
+.dropdown-menu > li > a:hover {
+    color: #FFF!important;
+    text-decoration: none;
+    background-color: #00438A !important;
+}
