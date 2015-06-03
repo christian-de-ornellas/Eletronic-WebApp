@@ -80,11 +80,11 @@ endif;
                     </div> <br /><br /><br />
 
                     <div class="col-xs-3">
-                        <input type="text" name="dt_compra" required="" class="form-control" placeholder="Data de compra">
+                        <input type="text" name="dt_compra" required="" id="dtcompra" class="form-control" placeholder="Data de compra">
                     </div>
 
                     <div class="col-xs-3">
-                        <input type="text" name="valor_compra" required="" class="form-control" placeholder="Valor da compra">
+                        <input type="text" name="valor_compra" id="vlcompra" required="" class="form-control" placeholder="Valor da compra">
                     </div>
 <!--                    Aqui a variavel o sistema reconhece a data atual do servidor-->
                     <div class="col-xs-2">
