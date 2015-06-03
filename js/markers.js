@@ -30,7 +30,7 @@ function initMap(cep,num,elm)
         }
     });       
 }
-function getAddr(cep,num) {
+function getAddr(cep,num){
     var url = 'http://clareslab.com.br/ws/cep/json/'+cep+'/';    
     if ($.browser.msie) {
         var url = 'ie.php';    

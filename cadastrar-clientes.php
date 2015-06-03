@@ -1,18 +1,4 @@
 <?php include'header.php' ?>
-
-<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false"></script>
-<script src="http://code.jquery.com/jquery-1.7.1.min.js" type="text/javascript"></script>
-<script src="js/cep.js" type="text/javascript"></script>
-<script src="js/gmaps.js" type="text/javascript"></script>
-<script src="js/jquery.js" type="text/javascript"></script>
-<script src="js/markers.js" type="text/javascript"></script>
-<script>
-    $(function () {
-        wscep({map: 'map1', auto: true});
-        wsmap('08615-000', '555', 'map2');
-    })
-</script>
-
 <?php
 
 function __autoload($class_name) {

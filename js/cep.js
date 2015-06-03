@@ -1,3 +1,5 @@
+
+
 $(document).ready(function(){
     $('head').append('<script src="js/mask.js" type="text/javascript"></script>');
 })
@@ -35,8 +37,9 @@ function wscep(conf)
         $('.cep-label').replaceWith(btn_busca)
         $('.btn_handler').live('click',function(){
             busca();
-        })
-    }    
+        });
+    } 
+    
     $('#cep').mask('99999-999');    
     $('#cpf').mask('999.999.999-99');    
     $('#rg').mask('99.999.999-9');    
