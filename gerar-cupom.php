@@ -76,7 +76,7 @@ endif;
                     </div>
 
                     <div class="col-xs-4">
-                        <input type="text" name="notafiscal" required="" class="form-control" placeholder="Nota fiscal (nº)">
+                        <input type="text" name="notafiscal" required="" class="form-control" id="fiscal" placeholder="Nota fiscal (nº)">
                     </div> <br /><br /><br />
 
                     <div class="col-xs-3">

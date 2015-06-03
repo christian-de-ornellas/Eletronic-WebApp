@@ -34,6 +34,7 @@ jQuery(function($){
     $('#nasc').mask('99/99/9999');    
     $('#cel').mask('(99)99999-9999');    
     $('#tel').mask('(99)9999-9999');   
+    $('#fiscal').mask('999.999.999');   
     $("#vlcompra").maskMoney({thousands : '', decimal : ','});
     
 
