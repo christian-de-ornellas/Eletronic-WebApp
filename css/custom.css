@@ -1,6 +1,6 @@
 body{
 background-image: url(../img/bg2.jpg);
-overflow-y: hidden; margin-top: 0 auto;
+/*overflow-y: hidden; margin-top: 0 auto;*/
 
 }
 aside {
@@ -129,3 +129,5 @@ width: 870px !important;
     
 }
 
+input:invalid { border: 1px solid red; }
+input:valid { border: 1px solid green; }

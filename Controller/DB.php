@@ -1,6 +1,6 @@
 <?php
 
-require_once 'G:\ChristianWebDeveloper\server\htdocs\Eletronic-Beta-1.0\Controller\config.php';
+require_once 'config.php';
 
 class DB{
 

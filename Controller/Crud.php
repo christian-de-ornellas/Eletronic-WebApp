@@ -1,5 +1,5 @@
 <?php
-require_once'G:\ChristianWebDeveloper\server\htdocs\Eletronic-Beta-1.0\Controller\DB.php';
+require_once'DB.php';
 
 abstract class Crud extends DB {
 

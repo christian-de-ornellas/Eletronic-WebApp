@@ -23,11 +23,14 @@ else
   else {
    window.onload = window.print; // helps with Opera
    }
+   
+   
    }  </script>
 
 <!--Final do script -->
 
-
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="css/custom.css">
 <link rel="alternate" type="text/css" midia="print" href="css/imprimir.css">
 <?php
@@ -69,7 +72,7 @@ function __autoload($class_name) {
     </tr>    
     <?php endforeach;   ?>
 </table><br />
-
+  <a href="cadastrar-clientes" class="btn btn-primary"> <i class="fa fa-user-plus"></i> Add Cliente</a>
 
 <!--<div id="invisivel">
     <input type="button" name="imprimir" value="Imprimir" onclick="window.print();">

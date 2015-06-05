@@ -6,7 +6,7 @@
  * CLASS PHP - ELETRONIC -
   ANALISTA DESENVOLVEDOR  -CHRISTIAN DE ORNELLAS POSSIDONIO
  */
-require_once 'G:\ChristianWebDeveloper\server\htdocs\Eletronic-Beta-1.0\Controller\Crud.php';
+require_once 'Crud.php';
 
 class Cupons extends Crud {
     

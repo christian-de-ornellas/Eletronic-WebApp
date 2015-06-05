@@ -1,3 +1,30 @@
+<?php 
+session_start(); 
+
+if(!isset($_SESSION["perfil"]) || !isset($_SESSION["id"]) 
+        || !isset($_SESSION["nome"]) 
+        || !isset($_SESSION["logado"]) ){
+    
+    session_destroy();
+    echo "<script>";
+    echo "location.href='index?m=".
+        base64_encode("Error, acesso invalido!!")."'";
+    echo "</script>";
+    exit;
+}else if($_SESSION["logado"] + 2 * 60  < time()){
+    session_destroy();
+    echo "<script>";
+    echo "location.href='index?m=".
+        base64_encode("Error,tempo expirou")."'";
+    echo "</script>";
+    exit;
+}else{
+    $_SESSION["logado"] = time();
+}
+
+?>  
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -32,13 +59,6 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <i class=""></i><i class="fa fa-user-plus"></i></i> Novos <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="cadastrar-clientes">Cliente</a></li>
-            <!-- <li><a href="cadastrar-promocaos">Promoção</a></li>
-            <li class="divider"></li>
-            <li><a href="gerar-cupon">Gerar um cupon</a></li>
-            
-            <li><a href="#">Separated link</a></li>
-            <li class="divider"></li>
-            <li><a href="#">One more separated link</a></li>-->
           </ul>
         </li>
         <li class="dropdown">
@@ -51,7 +71,7 @@
             <li><a href="listar-cupons">Cupom</a></li>
            
           </ul>
-        </li>
+        </li> <?php if($_SESSION["perfil"] == "ADMIN"){ ?>
          <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <i class="fa fa-bar-chart"></i> Relatórios <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">         
@@ -60,7 +80,7 @@
             <li class="divider"></li>
             <li><a href="#">Gráfico</a></li>
           </ul>
-        </li>
+        </li> <?php } ?>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-envelope-o"></i> Suporte<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
@@ -78,7 +98,7 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="glyphicon glyphicon-user"></i><span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#"><i class="fa fa-share-square-o"></i> Perfil</a></li>
+            <li><a href="#"><i class="fa fa-share-square-o"></i> <?php echo $_SESSION["nome"];  ?></a></li>
             <li><a href="#"><i class="fa fa-pencil-square-o"></i> Alterar</a></li>
             <li class="divider"></li>
              <li><a href="#"><i class="fa fa-power-off"></i> Sair do Sistema</a></li>

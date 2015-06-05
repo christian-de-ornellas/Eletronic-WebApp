@@ -1,4 +1,4 @@
-<?php include'header.php' ?>
+1<?php include'header.php' ?>
 <?php
 
 function __autoload($class_name) {
@@ -84,6 +84,7 @@ function __autoload($class_name) {
                         <input type="text" name="nasc_cliente" id="nasc" class="form-control" placeholder="Nascimento">
                     </div>
                     <div class="col-xs-3">
+                        
                         <input type="text" name="cpf_cliente" class="form-control" required="" placeholder="Cpf" id="cpf">
                     </div>
                     <div class="col-xs-3">
@@ -139,6 +140,7 @@ function __autoload($class_name) {
                 <button type="reset" class="btn btn-danger"> <i class="fa fa-times"></i> Cancelar</button>
                 <button type="submit"  name="incluir" class="btn btn-success"> <i class="fa fa-user-plus"></i> Incluir</button>
                 </form>
+                    
             </div>
         </div>
 </aside>

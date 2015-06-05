@@ -28,19 +28,21 @@ ANALISTA DESENVOLVEDOR  -CHRISTIAN DE ORNELLAS POSSIDONIO--->
         </header>
         <aside><div class="panel panel-default">
   <div class="panel-heading">
-    <h3 class="panel-title">Acessar ao Sistema</h3>
+      <h3 class="panel-title"> <?php 
+            echo isset($_GET["m"])?base64_decode($_GET["m"]):"";?></h3>
   </div>
   <div class="panel-body">
-  <form action="index" method="post">
+  <form action="logar" method="post">
   <div class="form-group">
     <label for="exampleInputEmail1">Usuário</label>
-    <input type="text" name="usuario"class="form-control" id="exampleInputEmail1" placeholder="Digite um nome de usuário...">
+    <input type="text" name="login"class="form-control" id="exampleInputEmail1" placeholder="Digite um nome de usuário...">
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">Senha</label>
     <input type="password" class="form-control" name="senha" id="exampleInputPassword1" placeholder="Digite sua senha...">
   </div>
   <button type="submit" class="btn btn-default">Entrar</button>
+  
 </form>
   </div>
 </div></aside>
