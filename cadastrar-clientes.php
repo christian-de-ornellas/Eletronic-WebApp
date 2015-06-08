@@ -68,7 +68,92 @@ function __autoload($class_name) {
 
                     endif;
                     ?>
+                    
+          <?php
+		if(isset($_POST['incluir'])){
+			$id = (int)$_POST['id'];
+			$resultado = $cliente->ConsultarClientes($id);		
+		?>   
+                    <?php foreach($cliente->findAll() as $key => $value): ?>
+                    
+                     <form  name="frmcpf" method="post"  onsubmit="VerificaCPF();">  
+                        <input type="text" name="nome_cliente" class="form-control" value="<?php echo $resultado->nome_cliente; ?> placeholder="Nome">
+                        </div>
+                        <div class="col-xs-4">
+                            <input type="text" name="sobrenome_cliente" class="form-control"  placeholder="Sobrenome">
+                        </div>
+                        <div class="col-xs-4">
+                            <input type="text" name="email_cliente" class="form-control" placeholder="E-mail">
+                        </div>
+                </div> <br />
 
+                <div class="row">
+                    <div class="col-xs-2">
+                        <input type="text" name="nasc_cliente" id="nasc" class="form-control" placeholder="Nascimento">
+                    </div>
+                    <div class="col-xs-3">
+                        
+                        <input type="text" name="cpf_cliente" class="form-control"  maxlength="11" placeholder="Cpf" id="cpf">
+                    </div>
+                    <div class="col-xs-3">
+                        <input type="text" name="rg_cliente" id="rg" class="form-control" placeholder="Rg">
+                    </div>
+                    <div class="col-xs-4">
+                        <input type="text" name="nomepai_cliente" class="form-control" placeholder="Nome do pai">
+                    </div>
+                </div> 
+                <br />
+
+                <div class="row">
+                    <div class="col-xs-3">
+                        <input type="text" name="nomemae_cliente" class="form-control" placeholder="Nome da mae">
+                    </div>
+                    <div class="col-xs-3">
+                        <input type="text" name="tel_cliente" id="tel" class="form-control" placeholder="Telefone fixo">
+                    </div>
+                    <div class="col-xs-3">
+                        <input type="text" name="cel_cliente" id="cel" class="form-control"  placeholder="Celular">
+                    </div>
+                    <div class="col-xs-3">
+                        <input type="text" name="cep_cliente" id="cep" class="form-control"  placeholder="Cep" >
+                    </div>
+                </div> <br />
+
+                <div class="row">
+                    <div class="col-xs-4">
+                        <input type="text" name="rua_cliente" class="form-control" id="rua" placeholder="Rua" readonly >
+                    </div>
+                    <div class="col-xs-1">
+                        <input type="text" name="num_cliente" class="form-control" id="num" placeholder="Nº">
+                    </div>
+                    <div class="col-xs-3">
+                        <input type="text" name="cidade_cliente" class="form-control" id="cidade" placeholder="Cidade" readonly >
+                    </div>
+                    <div class="col-xs-4">
+                        <input type="text" name="bairro_cliente" class="form-control" id="bairro" placeholder="Bairro" readonly >
+                    </div>
+                </div> <br />
+
+                <div class="row">
+                    <div class="col-xs-4">
+                        <input type="text" name="estado_cliente" class="form-control" id="uf" placeholder="Estado" readonly >
+                    </div>
+                    <div class="col-xs-4">
+                        <input type="text" name="complemento_cliente" class="form-control" placeholder="Complemento">
+                    </div>
+                    <div class="col-xs-4">
+                        <input type="text" name="facebook_cliente" class="form-control" placeholder="Facebook">
+                    </div>
+                </div> <br />
+                <button type="reset" class="btn btn-danger"> <i class="fa fa-times"></i> Cancelar</button>
+                <button type="submit"  name="incluir" class="btn btn-success"> <i class="fa fa-user-plus"></i> Incluir</button>
+                <input type="submit"  class="btn btn-success" name="Submit" value="Checar" onclick="VerificaCPF();">
+                <button type="submit"  name="consultar" class="btn btn-success"> <i class="fa fa-user-plus"></i> Consultar</button>
+                </form>
+                    <?php endforeach; ?>
+            </div>
+        </div>
+                <?php  }else{  ?>   
                     <form  name="frmcpf" method="post"  onsubmit="VerificaCPF();">  
                         <input type="text" name="nome_cliente" class="form-control" required="" placeholder="Nome">
                         </div>
@@ -140,12 +225,13 @@ function __autoload($class_name) {
                 </div> <br />
                 <button type="reset" class="btn btn-danger"> <i class="fa fa-times"></i> Cancelar</button>
                 <button type="submit"  name="incluir" class="btn btn-success"> <i class="fa fa-user-plus"></i> Incluir</button>
-               
-                <input type="button"  class="btn btn-success" name="Submit" value="Checar" onclick="VerificaCPF();">
+                <input type="submit"  class="btn btn-success" name="Submit" value="Checar" onclick="VerificaCPF();">
+                <button type="submit"  name="consultar" class="btn btn-success"> <i class="fa fa-user-plus"></i> Consultar</button>
                 </form>
-                    
+                    <?php } ?>
             </div>
         </div>
+        
 </aside>
 
 <?php require_once 'bottom.php'; ?>

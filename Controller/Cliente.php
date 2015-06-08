@@ -207,5 +207,20 @@ public function insert(){
 		return $stmt->execute();
 
 	}
+        
+        public function ConsultarClientes($id) {
+            
+            $sql="SELECT * $this->table WHERE cpf_cliente LIKE :cpf_cliente, nome_cliente LIKE :nome_cliente,"
+            . "sobrenome_cliente LIKE :sobrenome_cliente, rg_cliente LIKE :rg_cliente, "
+            . "email_cliente LIKE :email_cliente, cep_cliente LIKE :cep_cliente ";
+            $stmt= DB::prepare($sql);
+            $stmt->bindParam(':cpf_cliente', $this->cpf_cliente);
+            $stmt->bindParam(':nome_cliente', $this->nome_cliente);
+            $stmt->bindParam(':sobrenome_cliente', $this->sobrenome_cliente);
+            $stmt->bindParam(':rg_cliente', $this->rg_cliente);
+            $stmt->bindParam(':email_cliente', $this->email_cliente);
+            $stmt->bindParam(':cep_cliente', $this->cep_cliente);
+            $stmt->bindParam(':id', $id);
+        }
 
 }

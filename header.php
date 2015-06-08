@@ -66,7 +66,7 @@ if(!isset($_SESSION["perfil"]) || !isset($_SESSION["id"])
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-folder-open"></i> Consultas<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-              <?php if($_SESSION["perfil"] == "ADMIN"){ ?>
+              <?php // if($_SESSION["perfil"] == "ADMIN"){ ?>
               <li><a href="listar-clientes">Contatos</a></li>
             <li class="divider"></li>
             <li><a href="listar-enderecos">Endereços</a></li>
@@ -74,7 +74,7 @@ if(!isset($_SESSION["perfil"]) || !isset($_SESSION["id"])
             <li><a href="listar-cupons">Cupom</a></li>
             <li class="divider"></li>
             <li><a href="listar-nf.php">Nota Fiscal</a></li>
-           <?php } ?>
+           <?php // } ?>
           </ul>
         </li> <?php if($_SESSION["perfil"] == "ADMIN"){ ?>
          <li class="dropdown">
