@@ -1,4 +1,5 @@
-1<?php include'header.php' ?>
+
+<?php include'header.php' ?>
 <?php
 
 function __autoload($class_name) {
@@ -68,7 +69,7 @@ function __autoload($class_name) {
                     endif;
                     ?>
 
-                    <form action="" method="post">  
+                    <form  name="frmcpf" method="post"  onsubmit="VerificaCPF();">  
                         <input type="text" name="nome_cliente" class="form-control" required="" placeholder="Nome">
                         </div>
                         <div class="col-xs-4">
@@ -85,7 +86,7 @@ function __autoload($class_name) {
                     </div>
                     <div class="col-xs-3">
                         
-                        <input type="text" name="cpf_cliente" class="form-control" required="" placeholder="Cpf" id="cpf">
+                        <input type="text" name="cpf_cliente" class="form-control" required="" maxlength="11" placeholder="Cpf" id="cpf">
                     </div>
                     <div class="col-xs-3">
                         <input type="text" name="rg_cliente" id="rg" class="form-control" required="" placeholder="Rg">
@@ -139,6 +140,8 @@ function __autoload($class_name) {
                 </div> <br />
                 <button type="reset" class="btn btn-danger"> <i class="fa fa-times"></i> Cancelar</button>
                 <button type="submit"  name="incluir" class="btn btn-success"> <i class="fa fa-user-plus"></i> Incluir</button>
+               
+                <input type="button"  class="btn btn-success" name="Submit" value="Checar" onclick="VerificaCPF();">
                 </form>
                     
             </div>

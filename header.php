@@ -11,7 +11,7 @@ if(!isset($_SESSION["perfil"]) || !isset($_SESSION["id"])
         base64_encode("Error, acesso invalido!!")."'";
     echo "</script>";
     exit;
-}else if($_SESSION["logado"] + 2 * 60  < time()){
+}else if($_SESSION["logado"] + 10 * 60  < time()){
     session_destroy();
     echo "<script>";
     echo "location.href='index?m=".
@@ -23,8 +23,6 @@ if(!isset($_SESSION["perfil"]) || !isset($_SESSION["id"])
 }
 
 ?>  
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,6 +35,7 @@ if(!isset($_SESSION["perfil"]) || !isset($_SESSION["id"])
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
 <div class="container">
     <header><img src="img/logo.png" width="320" ></header>
@@ -59,17 +58,23 @@ if(!isset($_SESSION["perfil"]) || !isset($_SESSION["id"])
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <i class=""></i><i class="fa fa-user-plus"></i></i> Novos <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="cadastrar-clientes">Cliente</a></li>
+            <?php if($_SESSION["perfil"] == "ADMIN"){ ?>
+            <li><a href="cadastrar-promocao">Promoção</a></li>
+             <?php } ?>
           </ul>
         </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-folder-open"></i> Consultas<span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Cliente</a></li>
+              <?php if($_SESSION["perfil"] == "ADMIN"){ ?>
+              <li><a href="listar-clientes">Contatos</a></li>
             <li class="divider"></li>
-            <li><a href="#">Nota fiscal</a></li>
+            <li><a href="listar-enderecos">Endereços</a></li>
             <li class="divider"></li>
             <li><a href="listar-cupons">Cupom</a></li>
-           
+            <li class="divider"></li>
+            <li><a href="listar-nf.php">Nota Fiscal</a></li>
+           <?php } ?>
           </ul>
         </li> <?php if($_SESSION["perfil"] == "ADMIN"){ ?>
          <li class="dropdown">
@@ -101,7 +106,7 @@ if(!isset($_SESSION["perfil"]) || !isset($_SESSION["id"])
             <li><a href="#"><i class="fa fa-share-square-o"></i> <?php echo $_SESSION["nome"];  ?></a></li>
             <li><a href="#"><i class="fa fa-pencil-square-o"></i> Alterar</a></li>
             <li class="divider"></li>
-             <li><a href="#"><i class="fa fa-power-off"></i> Sair do Sistema</a></li>
+            <li><a href="sair"><i class="fa fa-power-off"></i> Sair do Sistema</a></li>
            
           </ul>
         </li>

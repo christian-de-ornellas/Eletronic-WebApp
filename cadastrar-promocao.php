@@ -14,7 +14,7 @@ function __autoload($class_name) {
             if (isset($_POST['cadastrar'])):
 
 
-                $promocoes = new Promocao();
+                $promocoes = new Promocao;
 
                 $promocao = trim($_POST["promocao"]);
                 $data = trim($_POST["data"]);
@@ -53,27 +53,6 @@ function __autoload($class_name) {
 
                 <button type="reset" class="btn btn-danger"> <i class="fa fa-times"></i>Cancelar</button>
                 <button type="submit" name="cadastrar" class="btn btn-success"> <i class="fa fa-user-plus"></i> Incluir</button>
-<table class="table table-hover">
-                <tr>
-                    <th>CODIGO</th>
-                    <th>PROMOÇÃO</th>
-                    <th>DATA</th>
-                    <th>HORA</th>
-                  <!--  <th>AÇÃO</th>-->
-                </tr>
-<?php foreach ($promocoes->findAll() as $key => $value): ?>
-                    <tr>
-                        <td><?php echo $value->id; ?></td>
-                        <td><?php echo $value->promocao; ?></td>
-                        <td><?php echo $value->data; ?> </td>
-                        <td><?php echo $value->hora; ?></td> 
-                   <!-- <td><a>Editar</a></td>
-                        <td><a>Excluir</a></td>-->
-                        </div>
-                        </div> 
-                    </tr>
-<?php endforeach; ?>
-            </table>
         </div>
     </div>
 </form>     

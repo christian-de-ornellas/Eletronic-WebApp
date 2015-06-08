@@ -129,6 +129,19 @@ FROM
         return $stmt->fetchAll();
     }
 
+    public function relnf() {
+
+        $sql = "SELECT
+  `clientes`.`nome_cliente`, `clientes`.`sobrenome_cliente`, `cupons`.`id`,
+  `cupons`.`dt_compra`, `cupons`.`notafiscal`, `cupons`.`valor_compra`
+FROM
+  `clientes`, `cupons`;`
+  order by cupons.id";
+        $stmt = DB::prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
+
     public function VerificarParticipante($id) {
 
         $sql = "SELECT * FROM $this->table WHERE id = :id, ";

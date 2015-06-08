@@ -41,7 +41,7 @@ ANALISTA DESENVOLVEDOR  -CHRISTIAN DE ORNELLAS POSSIDONIO--->
     <label for="exampleInputPassword1">Senha</label>
     <input type="password" class="form-control" name="senha" id="exampleInputPassword1" placeholder="Digite sua senha...">
   </div>
-  <button type="submit" class="btn btn-default">Entrar</button>
+  <button type="submit" class="btn btn-success">Entrar</button>
   
 </form>
   </div>
